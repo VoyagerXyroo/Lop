@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="preload"
+      href="https://accounts.google.com/gsi/client"
+      as="script"
+    />
+    <link
+      rel="icon"
+      type="png"
+      href="https://cdn-static.dora.run/favicon.4ee7a8ea1aaf88ec.png"
+    />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
+    />
+    <title>Dora Alpha</title>
+    <script>
+      function setCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+          var date = new Date();
+          date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+          expires = "; expires=" + date.toUTCString();
+        }
+        let domain = "";
+        if (window.location.hostname.includes("test.dora.run")) {
+          domain = "; domain=.test.dora.run";
+        } else if (window.location.hostname.includes("prerelease.dora.run")) {
+          domain = "; domain=.prerelease.dora.run";
+        } else if (window.location.hostname.includes("dora.run")) {
+          domain = "; domain=.dora.run";
+        }
+        document.cookie =
+          name +
+          "=" +
+          encodeURIComponent(value) +
+          expires +
+          "; path=/" +
+          domain;
+      }
+
+      const utmUrlParamKeys = [
+        "utm_source",
+        "utm_medium",
+        "utm_campaign",
+        "utm_content",
+        "utm_term",
+      ];
+
+      const doraUrlParamKeys = ["coupon"];
+
+      try {
+        var urlParams = new URLSearchParams(window.location.search);
+        let pscd = urlParams.get("pscd");
+        let ps_partner_key = urlParams.get("ps_partner_key");
+        let ps_xid = urlParams.get("ps_xid");
+        let gsxid = urlParams.get("gsxid");
+        let gspk = urlParams.get("gspk");
+        if (ps_partner_key && ps_xid && gsxid && gspk) {
+          setCookie("pscd", pscd, 30);
+          setCookie("ps_partner_key", ps_partner_key, 30);
+          setCookie("ps_xid", ps_xid, 30);
+          setCookie("gsxid", gsxid, 30);
+          setCookie("growSumoPartnerKey", gspk, 30);
+          setCookie("ps_mode", "trackingV2", 30);
+        }
+        for (const key of utmUrlParamKeys) {
+          if (urlParams.has(key)) {
+            setCookie(key, urlParams.get(key), 30);
+          }
+        }
+        for (const urlParamKey of doraUrlParamKeys) {
+          const key = `dora_${urlParamKey}`;
+          const value = urlParams.get(urlParamKey);
+          if (value) setCookie(key, value, 30);
+        }
+      } catch (error) {}
+    </script>
+    <script type="text/javascript">
+      (function () {
+        var gs = document.createElement("script");
+        gs.src = "https://a.dora.run/pr/js";
+        gs.type = "text/javascript";
+        gs.async = "true";
+        gs.onload = gs.onreadystatechange = function () {
+          var rs = this.readyState;
+          if (rs && rs != "complete" && rs != "loaded") return;
+          try {
+            growsumo._initialize("pk_clOESgVJxZAeYnUMObMFmnmGYDg9Pwbf");
+            if (typeof growsumoInit === "function") {
+              growsumoInit();
+            }
+          } catch (e) {}
+        };
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(gs, s);
+      })();
+    </script>
+    <script
+      type="module"
+      crossorigin
+      src="/__dora__/account/assets/index.82e7a298.js"
+    ></script>
+    <link rel="stylesheet" href="/__dora__/account/assets/index.04a23fbf.css" />
+  </head>
+
+  <body>
+    <div id="app"></div>
+  </body>
+</html>

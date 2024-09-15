@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta
+      name="keywords"
+      content="free 3d website,pricing,Dora,NoCode,Design"
+    />
+    <title>Dora Pricing: Get Started with 3D Website for FREE</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      class="favicon-tab"
+      type="image/png"
+      href="/favicon.ico"
+    />
+    <style>
+      html,
+      body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      #dora-root {
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+      }
+    </style>
+    <style>
+      #loading {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        flex-wrap: wrap;
+      }
+
+      #loading img {
+        width: 58px;
+        height: 58px;
+      }
+    </style>
+    <script>
+      window.__ENV = {
+        RELEASE_VERSION: "0.0.0",
+        TARGET: "online",
+        HOME_HOST: "www.dora.run",
+        RUN_HOST: "dora.run",
+        PREVIEW_HOST: "preview.dora.run",
+        SWIMLANE_HOST: "",
+        API_HOST: "api-us.dora.run",
+        NEO_API_HOST: "neo-api.dora.run",
+        CDN_NEO_API_HOST: "cdn-neo-api.dora.run",
+        STATIC_ASSETS_HOST: "cdn-static-e.dora.run",
+        USER_ASSETS_HOST: "cdn-design-e.dora.run",
+        CDN_IMGS_HOST: "cdn-imgs.dora.run",
+      };
+      window.__ASSET_PREFIX = "https://cdn-static-e.dora.run/dora_runner_web";
+      window.__ASSET_MANIFEST = {
+        "main.dart.js": "main.dart.9efb633a.js",
+        "threed_renderer/build/editor.js.LICENSE.txt":
+          "threed_renderer.94a71d34/build/editor.js.LICENSE.txt",
+        "threed_renderer/build/glbCompress.js":
+          "threed_renderer.94a71d34/build/glbCompress.js",
+        "threed_renderer/build/runner.js":
+          "threed_renderer.94a71d34/build/runner.js",
+        "threed_renderer/build/editor.js":
+          "threed_renderer.94a71d34/build/editor.js",
+        "threed_renderer/build/chunk.bundle.js":
+          "threed_renderer.94a71d34/build/chunk.bundle.js",
+        "threed_renderer/build/runner.js.LICENSE.txt":
+          "threed_renderer.94a71d34/build/runner.js.LICENSE.txt",
+        "public/error_pages/not_found.html":
+          "public/error_pages/not_found.32a93b53.html",
+        "public/previewer.css": "public/previewer.d2c4671b.css",
+        "public/loading.gif": "public/loading.6330c237.gif",
+        "public/made_in_dora/tag_icon_white.webp":
+          "public/made_in_dora/tag_icon_white.91514bb1.webp",
+        "public/made_in_dora/ai_tag_icon_white.png":
+          "public/made_in_dora/ai_tag_icon_white.1717c340.png",
+        "public/made_in_dora/tag_icon.png":
+          "public/made_in_dora/tag_icon.9712852f.png",
+        "public/made_in_dora/ai_tag_icon.png":
+          "public/made_in_dora/ai_tag_icon.74d52789.png",
+        "public/made_in_dora/ai_tag_bg.png":
+          "public/made_in_dora/ai_tag_bg.1ad890be.png",
+        "public/previewer.js": "public/previewer.8871cfd9.js",
+      };
+    </script>
+    <script>
+      function setCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+          var date = new Date();
+          date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+          expires = "; expires=" + date.toUTCString();
+        }
+        let domain = "";
+        if (window.location.hostname.includes("test.dora.run")) {
+          domain = "; domain=.test.dora.run";
+        } else if (window.location.hostname.includes("prerelease.dora.run")) {
+          domain = "; domain=.prerelease.dora.run";
+        } else if (window.location.hostname.includes("dora.run")) {
+          domain = "; domain=.dora.run";
+        }
+        document.cookie =
+          name +
+          "=" +
+          encodeURIComponent(value) +
+          expires +
+          "; path=/" +
+          domain;
+      }
+
+      const utmUrlParamKeys = [
+        "utm_source",
+        "utm_medium",
+        "utm_campaign",
+        "utm_content",
+        "utm_term",
+      ];
+
+      const doraUrlParamKeys = ["coupon"];
+
+      try {
+        var urlParams = new URLSearchParams(window.location.search);
+        let pscd = urlParams.get("pscd");
+        let ps_partner_key = urlParams.get("ps_partner_key");
+        let ps_xid = urlParams.get("ps_xid");
+        let gsxid = urlParams.get("gsxid");
+        let gspk = urlParams.get("gspk");
+        if (ps_partner_key && ps_xid && gsxid && gspk) {
+          setCookie("pscd", pscd, 30);
+          setCookie("ps_partner_key", ps_partner_key, 30);
+          setCookie("ps_xid", ps_xid, 30);
+          setCookie("gsxid", gsxid, 30);
+          setCookie("growSumoPartnerKey", gspk, 30);
+          setCookie("ps_mode", "trackingV2", 30);
+        }
+        for (const key of utmUrlParamKeys) {
+          if (urlParams.has(key)) {
+            setCookie(key, urlParams.get(key), 30);
+          }
+        }
+        for (const urlParamKey of doraUrlParamKeys) {
+          const key = `dora_${urlParamKey}`;
+          const value = urlParams.get(urlParamKey);
+          if (value) setCookie(key, value, 30);
+        }
+      } catch (error) {}
+    </script>
+
+    <script
+      defer
+      src="https://cdn-static-e.dora.run/dora_runner_web/main.dart.9efb633a.js"
+    ></script>
+    <script>
+      window.DORA_PROJECT_PREPARATION =
+        '{"summary":{"fonts":{"IBM Plex Mono-Bold":["W4fnjUU2y","WkNOT9Jx5"],"IBM Plex Mono-Medium":["WXX5B4PdR","WLV6EIzgw","WmY9160QX","WdbnWuA3n","Wxw4UxVMC","WvbtZPOlx","W1WBNm8mg"],"Manrope-Bold":["page16~18","page13~18","page13~38","page13~39","page13~37","page26~37","page26~18","page26~39","page26~38","page24~37","page24~38","page24~39","page24~18","WbLW7xYeg"],"Poppins-SemiBold":["page22~11","page22~13","page1~155","page1~111","page1~113","page1~99","page1~128","page1~135","page1~134","page1~130","page1~170","page1~102","page1~107","page1~148","page1~104","page1~147","page1~103","Woh8TafdC","W1d8QIcpo","WP2oCpUq8","W1wnuhQJe","WtrDC51MB","WcrCbndWh","WYkWkTwjV","WWiphueCC","WVyUSA1yv","WLWsz337t","8kBqD3kWOh~128","8kBqD3kWOh~111","8kBqD3kWOh~134","8kBqD3kWOh~147","WsI6zRi5z","WZ97AYNKa","0D7o8dIIsQ~128","WBOAnqwok","WI9Ux4F2C","W6C2FKVBq","WHOmjYcJM","WLu34yLqz","W7t16NcX4","gvWQ1wZ0IY~104","WgKK2it8Q","WB6ls7zXc","W618yJ5HK","W2vIXYK0K","WRZSnixZG","WVxEdBteX","WvkWc5eZN","Wk2kcmdVW","W4delDohQ","WBqfxqACA","WDmtsbatL","WFYP71kMF","WiZOXprTz","WyrySp26e","Wg5Oes0t2","WjAVhAA5i","W3m9AXd8D","WFR0q2iWu","WG6HVu9tM","WX6n1uhfD","WecjKRLR5","WARxJ0zrY","Wy1xfBXrQ","WimXMqUOb","WvGB7ObGS","WwdFmhS34","WcJiTExiE","W4osmdpvE","WyDoSDF4k","W5xQXTiUl","W7srOSesI","WVxKNxCHD","WxzmAUiOR","WQw8meBps","WfFFgR5Bx","WGONEoUfF","WSc8BMEVq","We59YNl3y","WJUBYFoyt","WR26a00MO","WNSc1ZjAh","6UIcfVS852~21","WiEPoqPyt","Ws91hzAHu","page16~9","WoLn2hlSf","WHHesTnO6","WZ62w4uzl","WJjXlwWav","WQlfntG3X","WIHcGuqUH","page23~21","6HkJW1lP5c~103","6HkJW1lP5c~104","W0JZOawxg","WQB4KBM5e","WNSpIafye","WcwrazpcQ","WYbmbU0Fg","WiRIth8eV","WzMqiVRHj","WnnksWlBG","WEvaozCvv","WYw1j3M0j","WhPkz4mIy","Wkak8ZBys","W6Ti1w9t2","WSG48J7Lf","WSzVgDHxO","page22~15","WF2pNl3sE","WZlezHTmP","WHClRSdkG","WJdvg1DPg","WqOUrDvqv","WSVP5JdYa","W5ZzcjFtT","W6YlsvPF7","WRmYuV4iE","WLO7Cx3aQ","WjL8P1E4r","WozHOmRbv","WYt8mk2IN","WJeyOFNue","WdOH74m6R","WXUmihWSU","WAeMNF0YH","W0nfGlgUR","Wl3oLdnCV","WoCDiFMaf","WwbOVUgok","WOCpUcueC","W51woDkk5","WlMiGte60","WCLxjcLaF","Wy6siT3wb","WwXvcGrn9","WZGpYWdRI","WCYuTg9c5","WcDl0fC2k","WFBUuojFQ","WkhneBJta","WpliZsQ98","WyrGA69zn","WmUguWQXG","WbBpBUhH4","WJVp2Q4by","Wdg164eEF","Ws171yTvk","WIq6OxQbJ","WK5810a9X","WoHhUIxgT","WlIIcPJiO","WqJIT9c0b","WeWOGGYc3","WYJRZkfgZ","W0W4GDFPN","WtRB3vJBx","WJbJU9VAW","WxkfSyI9e","WQecilWaB","WTdj1S5qF","Wk6zcuBMg","W3ASRJt2N","WNsSF8o3A","WoUpCzVvl","W0BcV8P1X","WeveL0w1Y","W2v519gyI","SnskVYFkqj~104","WMJ3AH00y","WWh0w9ZDt","W1SxgRGdl","W2aI3yYM5","WUCabPo4q","ryvvCHXAwJ~104","WEnH5vgvz","WYDkueLNg","WQ4rajo6u","WJfFl3qCt","WNyesuJRL","WAJpaTLff","WcD2DHVXp","W0ibSAHYn","Wynly8UxX","W1r7cFsqR","Wf5yq4Tj3","WEvLSylml","WV6WlvfIF","W4KUnMoQl","Wmk03dzGm","WJYzw077k","WjpwxrnZv","W6xRtDIxo","WhVRuQ6Su","WDwSo0VUG","WvKH0CaHy","WBgjQFaxH","W0PtqN5vB","WCm1jXTIR","W638BgrLY","W87KWnSzn"],"Space Grotesk-SemiBold":["WPCEzzVm9"],"Poppins-Light":["Wht0ex72e","WbYHE6sP2","WsLApTE7X"],"IBM Plex Mono-Regular":["Wu7lZ9wCH"],"Poppins-Regular":["WiYXL3Gwt","W5UA4SXKk","W9tSs1QGm","WAMWb7uTT","WScgbaG4Q","page1~157","page1~112","page1~153","page1~159","page1~165","page1~167","page1~161","page1~163","page1~176:page11~3","page1~173:page11~3","page1~172:page11~3","page1~175:page11~3","page1~174:page11~3","Wq01AK04y","Wc9yTuvPg","WNDxE93Oz","WWl1oDN8H","WwUrlkJUX","W9dm2nneI","8kBqD3kWOh~112","8kBqD3kWOh~129","8kBqD3kWOh~136","8kBqD3kWOh~211","8kBqD3kWOh~217","page3~6","page3~5","page3~4","W0Q8uTvZ5","W3YNkpuV6","W04Q20KNG","WbPQkeJJh","WwAUycBmJ","Wiqm1zlE3","WZajJN4ox","WCLrmkBWo","WpLOLz4U0","WCkJDEddE","WMyyvj88f","WjtPFhTeO","WY1bczxL5","WaZMgq94L","W1tjunjK6","W1P2VFekC","WO2drjwee","WQMfdNyLw","WmmjDL349","Wm0OjPxIC","WmhwZrjTk","Wbj9cN14k","WvNgi4F7F","WK26OF2qE","WMnv66MaS","W0LrieG9L","WaxjaGu6r","W8pYWkbrO","W8MJVxd89","W1xZs2QsZ","WDiCjGIT6","Wq2GzEP3E","WPAk2wYxG","WAhmxLFfl","WrraLjsu4","WkE7JC3wC","W3oxgvI1q","WkGau19qq","W0byXB4bN","W2Yk8kNAy","WsOxRoaAe","WzpQXsPEO","WkCjP1Af5","WEfWUcIb2","WWouQM92X","WvmhE9qkC","WU1OB1lNE","WYLvB9OC9","WWgDBBEqf","WJVdL4bd4","W9SP2SXUs","W5QvibuAA","WJH5zpCzM","WWSVUL0zO","W731EfsJW","WzmWRMHO2","Wo70Z3SzS","WALBlIQxE","W4E8rSdzs","WtwrynjVi","W7vHZXggo","WSO29NOg9","Ww5nRvB4h","W5H6ELimE","WEVaJMySR","WU4b5K82j","WFI5YzIAj","W0Lff4Bc3","W1mcmmpZm","WeTkvnFWa","WXbIaFm2Y","WT3E3ZXjU","WJxxixzk0"],"Inter-Bold":["page23~38","WwPY6NAYN","page1~192","page27~113","page27~107","page27~103","page27~148","page27~135","page27~210","page27~130","page27~170","page27~203","page27~99","page27~208","W38ihVxk8","WjCyn407g","W3wFspjXa","WAUqbfh2m"],"Manrope-Regular":["page22~7","page1~210","page27~217"],"Inter-Medium":["page9~4","page5~22","page10~22","Wmx4qFTI2"],"Montserrat-Bold":["page14~4"],"Inter-SemiBold":["page27~111","page27~147","page27~134","page27~207","page27~128","WsOGWR5bj","page23~42","W5fRUFhuL","We1HFQ3D5"],"Poppins-Bold":["WcSayKLmT","Wd71RNhY0","WeoTM7GXz","WV1QpPOmd","WgeSfeUC4","8kBqD3kWOh~203","8kBqD3kWOh~113","8kBqD3kWOh~130","8kBqD3kWOh~107","8kBqD3kWOh~99","8kBqD3kWOh~148","W3unFwrST","WsAdIbr1f","WGL1tMOdA","WH5zYKTsh","WljnD8VWP","page10~7","WgC6MnhWs","WM2zwA8t8","Ws5IQbJqD","Wf6C6UKlZ","Wd57kg8Wa","WFTQa2kHA","WFwcAjOvM","WKd4hjYe8","WbLtbQ72t","W1kXpCxpw","WzBep3z24","WaUHjHCi9","WO8UxInDu","WywN0tp06","Wu8n8U4T4","WkKk4l6Sk","WsIAJxXOk"],"Poppins-Medium":["WEfyblmbs","WLLTbUH0l","WsoBqhDCj","WAK8juFE4","WvoadzPmB","page22~5","WQiZhp4mg","Wt9gwqdv7","WOa8hRHm6","Wm9XWQBA6","W4ZUuNK3q","WewLkPOj3","WXBklNTTv","WRSPpKoFv","WR5YnX6lv","WUGADPNDF","W4sQwipnX","WM3UsXBJ6","WnAlND2xo","W4mcOJDAb","WaDwHeWXS","WsLPvpcXD","WJvPPPSuv","WBS4SOmfn","W3iDppL3S","WexGvYLUZ","WxW2NuhE4","WaT4ArRxl"],"Roboto-Regular":["W53sWL2BS","WHBhNqIxN","CqWahR93M~1#root","WeWnZJctf","CZwQtNeTJ~1#root","WT2f0EH7m","CamoEyV99~1#root","C7GCYC4qI~1#root","CeYjz3q7g~1#root","CENrDRDhw~1#root","C1kVUEx7P~1#root","Cr5AuZ4hs~1#root","C9c8eJeA5~1#root","CuHhjVVBk~1#root","CaOR5k8Bm~1#root","CuGaDEY62~1#root"],"Inter-Regular":["page11~3","page11~4","page11~2","page11~1#root","page9~1#root","page9~3","page9~2","page5~21","page5~20","page5~8","page5~13","page5~11","page5~18","page5~17","page5~16","page5~1#root","page5~15","page5~5","page5~4","page5~7","page5~6","page5~3","WiRE1uHLJ","WCoQ6sGjc","WGJtDRKCd","WCxKhoPVi","WqRgmItDu","page10~6","page10~4","page10~5","page10~3","page10~1#root","page10~21","Wk1vLp1sg","page10~20","WahW4b88e","WUditVIOZ","page10~8","WZOIvlb9d","page3~1#root","page3~3","page1~154","page1~110","page1~156","page1~195","page1~151","page1~194","page1~150","page1~197","page1~196","page1~152","page1~119","page1~115","page1~96","page1~158","page1~114","page1~95","page1~98","page1~191","page1~190","page1~166","page1~121","page1~123","page1~162","page1~164","page1~169","page1~127","page1~160","page1~133","page1~176","page1~132","page1~179","page1~173","page1~172","page1~175","page1~131","page1~174","page1~137","page1~139","page1~138","page1~1#root","page1~171","page1~188","page1~100","page1~187","page1~146","page1~189","page1~145","page1~101","page1~184","page1~140","page1~183","page1~186","page1~108","page1~106","page1~180","page1~182","page1~181","page27~119","page27~114","page27~115","page27~112","page27~110","page27~196","page27~197","page27~194","page27~150","page27~108","page27~149","page27~105","page27~106","page27~145","page27~146","page27~143","page27~144","page27~100","page27~183","page27~182","page27~138","page27~139","page27~136","page27~137","page27~211","page27~179","page27~176","page27~132","page27~133","page27~174","page27~175","page27~131","page27~172","page27~173","page27~1#root","page27~171","page27~180","page27~206","page27~129","page27~95","page27~96","page27~127","page27~169","page27~123","page27~97","page27~98","page27~209","WcPIE9I3P","WaHi6HXns","WI7Ziz4t3","WL9BgAobt","WkWAbMj64","WVMK0fIJL","CKx0smXGv~1#root","Cfn6NLIhX~1#root"]},"last_modified":1724064215707},"domain":null,"id":"1","api":{"/action":{"version":"515e6d1c-6a02-4bf5-a56a-f077090e42bc"},"/project/get":{"version":"c690f0f8-10e5-4bba-8ffe-abc02c177f6c"},"/meta":{"version":"3553ad6b-c240-40a4-aa51-b580056227e9"}}}';
+    </script>
+    <script>
+      window.doraAppTitle =
+        "Dora Pricing: Get Started with 3D Website for FREE";
+    </script>
+    <meta
+      name="google-site-verification"
+      content="SH_wqyVqGDPNBSLRH97oVmkRQMWoPY4HNarx22wBusE"
+    />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      defer
+      src="https://www.googletagmanager.com/gtag/js?id=G-JPSGKY82PS"
+    ></script>
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Dora Pricing: Get Started with 3D Website for FREE"
+    />
+    <meta
+      property="og:description"
+      content="Experience Dora with full access to our latest Alpha 2.0 version for FREE. Understand our pricing and explore the next level of AI-powered web design. Join now and we'll keep you informed about upcoming paid plans."
+    />
+    <meta
+      property="og:image"
+      content="https://cdn-design-e.dora.run/jS/sI/FP/jSsIFPaSV2J7f2QiizuTr.png"
+    />
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Dora Pricing: Get Started with 3D Website for FREE"
+    />
+    <meta
+      name="twitter:description"
+      content="Experience Dora with full access to our latest Alpha 2.0 version for FREE. Understand our pricing and explore the next level of AI-powered web design. Join now and we'll keep you informed about upcoming paid plans."
+    />
+    <meta
+      name="twitter:image"
+      content="https://cdn-design-e.dora.run/jS/sI/FP/jSsIFPaSV2J7f2QiizuTr.png"
+    />
+  </head>
+
+  <body>
+    <p>
+      Welcome to Dora's transparent pricing model. Our current offer grants you
+      FREE full access to the cutting-edge features of our alpha 2.0 version. As
+      we evolve and improve, we pledge to keep you informed every step of the
+      way. Before any changes to our pricing structure or the introduction of
+      paid plans, you'll be the first to know. Begin your immersive web design
+      experience with Dora today.
+    </p>
+    <a href="https://www.dora.run/">Dora's Official Website</a>
+    <a href="https://www.dora.run/templates"
+      >Browse Dora's Customizable Templates</a
+    >
+    <a href="https://www.dora.run/pricing">Explore Dora's Pricing Plans</a>
+    <a href="https://www.dora.run/ai"
+      >Dora AI: Generating powerful websites, one prompt at a time</a
+    >
+    <a href="https://3dchallenge.dora.run/">Dora x Minh 3D Design Challenge</a>
+    <a href="https://www.dora.run/signup">Sign up to Dora</a>
+    <a href="https://www.dora.run/projects">Dora Projects</a>
+    <div id="loading"></div>
+    <div id="dora-root"></div>
+
+    <script>
+      var loading = document.getElementById("loading");
+      if (loading) {
+        loading.style.display = "flex";
+        loading.style.zIndex = 100;
+        var queryParameters = new URLSearchParams(window.location.search);
+        var loadingUrl = window.loadingUrl || queryParameters.get("loadingUrl");
+        var loadingBg = window.loadingBg || queryParameters.get("loadingBg");
+
+        if (loadingUrl) {
+          if (loadingUrl.endsWith(".json") && bodymovin) {
+            var parentDiv = document.getElementById("loading");
+            var childDiv = document.createElement("div");
+            childDiv.id = "lottie-container";
+            parentDiv.appendChild(childDiv);
+
+            var animation = bodymovin.loadAnimation({
+              container: document.getElementById("lottie-container"),
+              path: loadingUrl,
+              renderer: "svg",
+            });
+          } else if (
+            loadingUrl.endsWith(".gif") ||
+            loadingUrl.endsWith(".apng") ||
+            loadingUrl.endsWith(".svg") ||
+            loadingUrl.endsWith(".png")
+          ) {
+            loading.innerHTML = `
+            <picture>
+            <img src="${loadingUrl}" alt="loading" style="opacity: 1;">
+            </picture>
+        `;
+          } else {
+          }
+        } else {
+          if (window.__ASSET_PREFIX && window.__ASSET_MANIFEST) {
+            let url = `${window.__ASSET_PREFIX}/${window.__ASSET_MANIFEST["public/loading.gif"]}`;
+            loading.innerHTML = `
+        <picture>
+        <img src="${url}" alt="loading" style="opacity: 1;">
+        </picture>
+    `;
+          }
+        }
+        if (loadingBg) {
+          loading.style.backgroundColor = loadingBg;
+          loading.style.backgroundImage = loadingBg;
+        }
+
+        const hideLoading = () => (loading.style.display = "none");
+
+        window.addEventListener("__dora_app_error", () => hideLoading());
+        window.addEventListener("__dora_app_mounted", () => hideLoading());
+      }
+    </script>
+    <div
+      class="seo-content"
+      style="opacity: 0; white-space: pre; display: none"
+    >
+      <a href="https://www.dora.run/ai">https://www.dora.run/ai</a
+      ><a href="/signin">/signin</a>
+      <p>Log in</p>
+      <p>Log in</p>
+      <p>Dora AI is now available to all users.</p>
+      <a href="/signup">/signup</a>
+      <p>Get started</p>
+      <p>Button</p>
+      <p>Get started</p>
+      <a href="https://help.dora.run/en/articles/9439079-import-from-figma"
+        >https://help.dora.run/en/articles/9439079-import-from-figma</a
+      >
+      <p>Figma to Dora</p>
+      <p>Figma to Dora</p>
+      <p>Alpha</p>
+      <p>Try it now</p>
+      <a href="/templates">Templates</a>
+      <p>Templates</p>
+      <p>Templates</p>
+      <a href="https://www.dora.run/ai">https://www.dora.run/ai</a
+      ><a href="/ai">Dora AI ✅</a><a href="/Home">Home AI</a
+      ><a
+        href="https://dora-design.notion.site/Dora-Community-9ce1e5f6913448f69ce0df3275fe7b86"
+        >https://dora-design.notion.site/Dora-Community-9ce1e5f6913448f69ce0df3275fe7b86</a
+      >
+      <p>Community</p>
+      <p>Community</p>
+      <a href="https://help.dora.run/en/">https://help.dora.run/en/</a>
+      <p>Docs</p>
+      <p>Docs</p>
+      <a href="/pricing">Pricing</a>
+      <p>Pricing</p>
+      <p>Pricing</p>
+    </div>
+  </body>
+</html>
